@@ -10,6 +10,14 @@ __attribute__((constructor)) static void init() {
   sceGuInit();
   sceGuStart(GU_DIRECT, list);
 
+  void *fbp0 = guGetStaticVramBuffer(480, 272, GU_PSM_8888);
+  void *fbp1 = guGetStaticVramBuffer(480, 272, GU_PSM_8888);
+  void *zbp = guGetStaticVramBuffer(480, 272, GU_PSM_4444);
+
+  sceGuDrawBuffer(GU_PSM_8888, fbp0, NEXT_POW2(480));
+  sceGuDispBuffer(480, 272, fbp1, NEXT_POW2(480));
+  sceGuDepthBuffer(zbp, NEXT_POW2(480));
+
   // Reset matrices
   sceGumMatrixMode(GU_PROJECTION);
   sceGumLoadIdentity();

@@ -9,6 +9,12 @@ void glClear(GLbitfield mask) {
   if (mask & GL_COLOR_BUFFER_BIT) {
     guMask |= GU_COLOR_BUFFER_BIT;
   }
+  if (mask & GL_DEPTH_BUFFER_BIT) {
+    guMask |= GU_DEPTH_BUFFER_BIT;
+  }
+  if (mask & GL_STENCIL_BUFFER_BIT) {
+    guMask |= GU_STENCIL_BUFFER_BIT;
+  }
 
   sceGuClear(guMask);
   error = 0;

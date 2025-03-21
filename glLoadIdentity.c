@@ -5,5 +5,6 @@
 
 void glLoadIdentity(void) {
   sceGumLoadIdentity();
+  error = 0;
   inccmds();
 }
