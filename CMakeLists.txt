@@ -5,6 +5,7 @@ add_library(GL STATIC
     glClearColor.c
 
     glEnable.c
+    glDisable.c
 
     glLoadIdentity.c
 

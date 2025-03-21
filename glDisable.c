@@ -2,52 +2,52 @@
 #include <internal.h>
 #include <pspgu.h>
 
-void glEnable(GLenum cap) {
+void glDisable(GLenum cap) {
   switch (cap) {
   case GL_ALPHA_TEST:
-    sceGuEnable(GU_ALPHA_TEST);
+    sceGuDisable(GU_ALPHA_TEST);
     break;
   case GL_BLEND:
-    sceGuEnable(GU_BLEND);
+    sceGuDisable(GU_BLEND);
     break;
   case GL_COLOR_LOGIC_OP:
-    sceGuEnable(GU_COLOR_LOGIC_OP);
+    sceGuDisable(GU_COLOR_LOGIC_OP);
     break;
   case GL_CLIP_PLANE0:
-    sceGuEnable(GU_CLIP_PLANES);
+    sceGuDisable(GU_CLIP_PLANES);
     break;
   case GL_COLOR_MATERIAL:
     // Not implemented
     break;
   case GL_CULL_FACE:
-    sceGuEnable(GU_CULL_FACE);
+    sceGuDisable(GU_CULL_FACE);
     break;
   case GL_DEPTH_TEST:
-    sceGuEnable(GU_DEPTH_TEST);
+    sceGuDisable(GU_DEPTH_TEST);
     break;
   case GL_DITHER:
-    sceGuEnable(GU_DITHER);
+    sceGuDisable(GU_DITHER);
     break;
   case GL_FOG:
-    sceGuEnable(GU_FOG);
+    sceGuDisable(GU_FOG);
     break;
   case GL_LIGHT0:
-    sceGuEnable(GU_LIGHT0);
+    sceGuDisable(GU_LIGHT0);
     break;
   case GL_LIGHT1:
-    sceGuEnable(GU_LIGHT1);
+    sceGuDisable(GU_LIGHT1);
     break;
   case GL_LIGHT2:
-    sceGuEnable(GU_LIGHT2);
+    sceGuDisable(GU_LIGHT2);
     break;
   case GL_LIGHT3:
-    sceGuEnable(GU_LIGHT3);
+    sceGuDisable(GU_LIGHT3);
     break;
   case GL_LIGHTING:
-    sceGuEnable(GU_LIGHTING);
+    sceGuDisable(GU_LIGHTING);
     break;
   case GL_LINE_SMOOTH:
-    sceGuEnable(GU_LINE_SMOOTH);
+    sceGuDisable(GU_LINE_SMOOTH);
     break;
   case GL_MULTISAMPLE:
     // Not implemented
@@ -74,13 +74,13 @@ void glEnable(GLenum cap) {
     // Not implemented
     break;
   case GL_SCISSOR_TEST:
-    sceGuEnable(GU_SCISSOR_TEST);
+    sceGuDisable(GU_SCISSOR_TEST);
     break;
   case GL_STENCIL_TEST:
-    sceGuEnable(GU_STENCIL_TEST);
+    sceGuDisable(GU_STENCIL_TEST);
     break;
   case GL_TEXTURE_2D:
-    sceGuEnable(GU_TEXTURE_2D);
+    sceGuDisable(GU_TEXTURE_2D);
     break;
   default:
     error = GL_INVALID_VALUE;
