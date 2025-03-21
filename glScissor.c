@@ -8,9 +8,6 @@ void glScissor(GLint x, GLint y, GLsizei width, GLsizei height) {
     return;
   }
 
-  sceGuStart(GU_DIRECT, list);
   sceGuScissor(x, y, width, height);
-  sceGuFinish();
-  sceGuSync(0, 0);
   error = 0;
 }

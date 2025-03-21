@@ -10,9 +10,6 @@ void glClear(GLbitfield mask) {
     guMask |= GU_COLOR_BUFFER_BIT;
   }
 
-  sceGuStart(GU_DIRECT, list);
   sceGuClear(guMask);
-  sceGuFinish();
-  sceGuSync(0, 0);
   error = 0;
 }
