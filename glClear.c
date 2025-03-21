@@ -12,4 +12,5 @@ void glClear(GLbitfield mask) {
 
   sceGuClear(guMask);
   error = 0;
+  inccmds();
 }

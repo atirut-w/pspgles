@@ -66,6 +66,9 @@ void glDisable(GLenum cap);
 
 void glEnable(GLenum cap);
 
+void glFinish(void);
+void glFlush(void);
+
 void glLoadIdentity(void);
 
 void glMatrixMode(GLenum mode);

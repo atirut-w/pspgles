@@ -19,5 +19,7 @@ void glViewport(GLint x, GLint y, GLsizei width, GLsizei height) {
 
   sceGuOffset(x, y);
   sceGuViewport(x + width / 2, y + height / 2, width, height);
+
   error = 0;
+  inccmds();
 }

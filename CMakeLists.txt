@@ -3,9 +3,13 @@ add_library(GL STATIC
 
     glClear.c
     glClearColor.c
+    
+    glDisable.c
 
     glEnable.c
-    glDisable.c
+    
+    glFinish.c
+    glFlush.c
 
     glLoadIdentity.c
 

@@ -83,8 +83,10 @@ void glEnable(GLenum cap) {
     sceGuEnable(GU_TEXTURE_2D);
     break;
   default:
-    error = GL_INVALID_VALUE;
+    error = GL_INVALID_ENUM;
     return;
   }
+
   error = 0;
+  inccmds();
 }

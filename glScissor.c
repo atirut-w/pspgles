@@ -10,4 +10,5 @@ void glScissor(GLint x, GLint y, GLsizei width, GLsizei height) {
 
   sceGuScissor(x, y, width, height);
   error = 0;
+  inccmds();
 }

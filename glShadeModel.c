@@ -14,4 +14,7 @@ void glShadeModel(GLenum mode) {
     error = GL_INVALID_ENUM;
     break;
   }
+
+  error = 0;
+  inccmds();
 }
