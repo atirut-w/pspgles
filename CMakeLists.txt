@@ -14,6 +14,7 @@ add_library(GL STATIC
     glOrtho.c
 
     glScissor.c
+    glShadeModel.c
 
     glViewport.c
 )

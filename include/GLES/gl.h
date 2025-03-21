@@ -50,12 +50,19 @@ enum {
   GL_TEXTURE = 0x1702,
 };
 
+enum {
+  GL_FLAT,
+  GL_SMOOTH,
+};
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 void glClear(GLbitfield mask);
 void glClearColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
+
+void glDisable(GLenum cap);
 
 void glEnable(GLenum cap);
 
@@ -69,6 +76,7 @@ void glOrthox(GLfixed left, GLfixed right, GLfixed bottom, GLfixed top,
               GLfixed nearVal, GLfixed farVal);
 
 void glScissor(GLint x, GLint y, GLsizei width, GLsizei height);
+void glShadeModel(GLenum mode);
 
 void glViewport(GLint x, GLint y, GLsizei width, GLsizei height);
 
